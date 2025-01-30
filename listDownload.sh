@@ -39,7 +39,7 @@ elif [ $type == 0 ]; then
 elif [ $type == 1 ]; then
     while IFS= read -r line
     do
-        yt-dlp -P Downloads -x --audio-format mp3 --embed-metadata $line
+        yt-dlp -P Downloads -o "%(fulltitle)s" -x --audio-format mp3 --embed-metadata $line
     done < "$input"
     echo "${bold}Audio Download Complete. ${normal}Press Enter to finish."
     read success
