@@ -2,4 +2,4 @@
 xsel -ob 2> /dev/null > "Shell Scripts"/clipboardHolder.txt
 line=$(head -n 1 "Shell Scripts"/clipboardHolder.txt)
 yt-dlp -P Downloads -o "%(fulltitle)s" --remux-video mp4 --embed-metadata $line
-notify-send "Clipboard video download complete."
+notify-send --app-name= "Clipboard Downloader" "Download complete."
